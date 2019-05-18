@@ -1,0 +1,47 @@
+<h1> Post your article </h1>
+
+<table>
+  <%= form_for @post, url: {action: "create"} do |f| %>
+
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@post.errors.count, "error") %> prohibitedthis article from being saved:
+      </h2>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <tr>
+        <th>Title</th>
+        <td> <%= f.text_field :postTitle ,size:"39" %> </td>
+    </tr>
+
+    <tr>
+        <th>Author</th>
+        <td> <%= f.text_field :postAuthor, size:"39" %> </td>
+    </tr>
+
+    <tr>
+        <th>Text</th>
+        <td> <%= f.text_area :postText ,size: "40x20" %> </td>
+    </tr>
+
+    <tr>
+        <td> <%= f.submit "Post" %> </td>
+    </tr>
+
+  <% end %>
+</table>
+
+
+
+
+
+    
+    
+    

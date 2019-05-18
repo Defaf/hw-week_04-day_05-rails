@@ -1,0 +1,30 @@
+
+
+<h2> 
+    <strong>Title:</strong>
+    <%= @post.postTitle %> 
+</h2>
+
+<h5> 
+    <strong>Written by:</strong>
+    <%= @post.postAuthor %> 
+</h5>
+
+<p> 
+    <strong>Text:</strong>
+    <%= @post.postText %> 
+</p>
+
+<h2>Comments</h2>
+<%= render @post.comments %>
+ 
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<table>
+<tr>
+    <td> <p> <%=link_to "Back",posts_path %> </p> </td>
+    <td> | </td>
+    <td> <p> <%= link_to "Edit", edit_post_path(@post) %> </p> </td>
+</tr>
+</table>
