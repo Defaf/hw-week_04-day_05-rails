@@ -1,7 +1,8 @@
 <h1> Update your article </h1>
 
-<table>
         <%= form_for @post, url: {action: "update"} do |f| %>
+<table>
+
     <tr>
         <th>Title</th>
         <td> <%= f.text_field :postTitle, size:"39" %> </td>
@@ -18,7 +19,7 @@
     </tr>
 
     <tr>
-        <td> <%= f.submit "Post" %> </td>
+        <td> <%= f.submit "Update" %> </td>
     </tr>
 
     <% end %>
