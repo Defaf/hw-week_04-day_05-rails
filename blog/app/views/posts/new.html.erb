@@ -1,7 +1,7 @@
 <h1> Post your article </h1>
 
-<table>
   <%= form_for @post, url: {action: "create"} do |f| %>
+<table>
 
   <% if @post.errors.any? %>
     <div id="error_explanation">
